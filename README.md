@@ -1,252 +1,304 @@
 # SQL
-excel ---------------->franmework------------------>asp.net/PHP
-frontend-------------->VB(visual basic)--------------> c/c++/Java/Python etc... (logically it is same but syntactically different)
-backend--------------->SQL (Mysql/oracle/MS-sql/postgresql)------------------------------> SQL or No-SQL (logically same and syntactically also same 90%)
-				nosql(DynamoDB/MongoDB/Cassandra/Dastax(Cloud))
------>sql is case insensitive 
+Career BI Training
+Introduction to Data and Database systems
 
-1. create database
-	a. GUI(graphical user interface)
-	b. Query
-2. delete database
-	a. GUI(graphical user interface)
-	b. Query
-3. * it represent all columns
-4. comments	1. single line
-		2. multiple line comment
-5. sql classified 
-		5 sub query languages
-		a. DDL (Data defintion language)
-			i. create 
-			ii. Drop		
-			iii. Alter
-			iv. Truncate
-		b. DML (Data manipulation language)
-			i. Insert 
-			II. Update
-			III. Delete
-			iV. Call
-			V. Explain Call
-			Vi. Lock
-		c. TCL (Transctinal control language)
-			i. Commit
-			II. savepoint
-			iii. Rollback
-			IV. set tranctions
-			V. set constant
-		d. DQL (Data Query language)
-			i. select
-		e. DCL (Data control language)
-			i. Grant
-			ii. Revoke
-6. create tables 
-	1. use graphically
-	2. query
-7. Insert data into table
-	1. use graphically
-	2. query
-8. Contraints
-	1. use graphically
-	2. query
-9. cascading referential integrity constraint
+		What is the Definition of Data?
+		Types of Data
+		What is DBMS
+		What is RDBMS
+		What are Tables
+		Difference B/W DBMS and RDBMS
+		What is Database
+		What is OORDBMS
 
-10. check contarints
+Complete Introduction to SQL SERVER
+		What is SQL
+		What is MS SQL SERVER?
+		What is T-SQL
+		Difference B/W SQL & T-SQL vs PL/SQL
+		What is query
 
-11. file or data import 
+SQL Server Software Installation
+		Download and Installation of SQL SERVER Software
+		Download and Installation of SSMS Software
+		Prerequisites to Install SQL SERVER Software
 
-12. Aggregate function
-	1. count
-	2. max
-	3. min
-	4. avg
-	5. sum
-13. clause
-	1. where 
-	2. having
-14. Meta data: 
+SSMS Window
+		What is an SSMS Window
+		What are Server Types
+		What is Server Name
+		What is Authentication
+		Types of Authentications
+		User Name
+		Password
+ 
+Data Types
+		What are Data Types
+		Different Types of Data Types
+		Integer Data Type
+		Decimal Data Type
+		Character Data Type
+		Money or Currency Data Type
+		Date Data Type
+		Var binary(max)
 
-15. partition by 
-	
-16. i have e-commerce amazon
-	1. stocks
-		id, product, qty
-		173, phones, 498
-	2. purchase
-		id, product, qty, date
-		173, phones, 2, 04/03/2022
-	3. orders
-		id, product, qty, vender
-		173, phones, 100, amazon
-		176, laptos, 100, amazon
-	4. threshold
-		id, product, qty, month
-		173, phones, 98,  2, 3, 4, 11
-		6 am 
-	exec wekend_11am
+Sub-Languages in SQL Server
+		DDL	(Data Definition Language)
+		DML	(Data Manipulation Language)
+		DRL	(Data Retrieval Language)
+		TCL	(Transaction Control Language)
+		DCL	(Data Control Language)
+
+Arithmetic Operators
+		ADDITION
+		SUBTRACTION
+		MULTIPLICATION
+		DIVISION
+		MODULUS
+
+Comparison Operators
+		EQUAL TO (=)
+		NOT EQUAL TO (<>, !=)
+		GREATER THAN (>)
+		LESS THAN (<)
+		GREATER THAN OR EQUAL TO (>=)
+		LESS THAN OR EQUAL TO (<=)
+
+Logical Operators
+		AND
+		OR
+		NOT
+
+Set Operators
+		UNION
+		UNION ALL
+		INTERSECT
+		EXCEPT
+ 
+Special Operators
+		IN
+		BETWEEN-AND
+		LIKE
+		IS NULL
+
+Schemas
+		What is Schema
+		Purpose of Schemas
+		Where to use Schemas
+
+Functions
+		What is Function
+
+Single-Row Functions
+		What are Single- Row Functions
+		Number Functions
+		Character Functions
+		Date Functions
+
+Column/Group/Aggregate
+		What are Aggregated Functions
+		SUM ()
+		MAX ()
+		MIN ()
+		COUNT ()
+
+Special Clauses
+		Group BY
+		Having
+		Order BY
+		Distinct
+		Rollup
+		Cube
+
+Ranking Functions
+		Purpose of Ranking
+		Row-Number ()
+		Rank ()
+		Dense-Rank ()
+ 
+Constraints
+		Domain
+		Identity
+		Check
+		Not null
+		Default
+		Entity
+		Primary Key
+		Unique
+		Composite Key
+		Referential
+		Foreign Key
+		Self-Referential Key
+
+Joins
+		Definition of Joins
+		Types of Joins
+		Inner Join Outer Joins
+		Left- Outer Join
+		Right- Outer Join
+		Full- Outer Join
+		Left-Anti Join
+		Right-Anti Join
+		Cross Join
+		Self-Join
+
+Views
+		What is View
+		Types of Views
+		Simple View
+		Complex View
+		Row-Level Security using Views
+		Column Level Security using Views
+		Advantages of View
+
+Synonyms
+		What are Synonyms
+		Purpose of Synonyms
+		What is Alias Name
+		Purpose of Alias Names
+		Advantages of Synonyms
+	 
+Indexes
+		What is an Index?
+		Need of indexes
+		Types of indexes
+		Clustered Index
+		Non-Clustered Index
+		Unique Index
+		Advantages of Indexes
+
+Sub Queries
+		What are Sub Queries
+		Purpose of Sub Queries
+		Types of Sub Queries
+		Non-Correlated Sub Queries
+		Single Row Sub Query
+		Multi Row Sub Query
+		Correlated Sub Queries
+		Nth Highest Salary
+
+TCL Commands
+		Introduction
+		Types of Transactions
+	1.	Implicit Transactions
+		Auto Commit
+	2.	Explicit Transactions
+		Begin Transaction
+		Commit Transaction
+		Rollback Transaction
+		Save Transaction
+
+DCL Commands
+		Grant
+		Revoke
+
+CTE	(Common Table Expression)
+		What is CTE
+		Uses of CTE
+		Where we use CTE
+
+Duplicates
+		What are Duplicates
+		How to Identify the Duplicates
+		How to remove the Duplicates
+ 
+Normalization
+		What is Normalization
+		Types of Normalizations
+		1st Form of Normalization
+		2nd Form of Normalization
+		3rd Form of Normalization
+
+E-R Modelling
+		What is E-R Modelling
+		Purpose of E-R Modelling
+		Structure of E-R Modelling
+		Advantages of E-R Modelling
+
+Relationships
+		What is Relationship
+		How to create the Relationships
+		Need of Relationships
+		Types of Relationships
+
+OLTPS
+		Full Form of OLTP
+		What is OLTP
+		Need of OLTPS
+		Where to OLTPS
+
+T-SQL
+Introduction to T-SQL
+		What is meant by T-SQL?
+
+T-SQL Blocks Anonymous Blocks Named Blocks
+Anonymous Blocks
+		Variables
+		Control Statements
+		Cursors
+
+Named Blocks
+		Procedures
+		Functions
+		Triggers
+ 
+Variables
+		What are Variables
+		Types of Variables
+		Local Variables
+		Global Variables
+
+Control Statements
+		What are Control Statements
+		Types of Control Statements
+		If	Else
+		If	Else	If
+		Nested	If
+		Case	When	Then
+
+Cursors
+		What is Cursor
+		Purpose of Cursors
+		Types of Cursors
+		Cursors without Variables
+		Cursors with Variables
+
+Stored Procedures
+		What is a Procedure
+		Need of Procedures
+		Types of Procedures
+		1. With Parameters
+		Input Parameters
+		Output Parameters
+		2. Without Parameters
+		Altering the Procedures
+		Hiding the script of the Procedures
+		Drop the Procedure
+
+Stored Functions
+		What are functions
+		Need of Functions
+		Types of Functions
+		1. Scalar OR Single Value
+		2. Table Value or Multi-row
+		Altering the Function
+		Drop the Function
+	 
+Triggers
+		What is Trigger
+		Purpose of Trigger
+		Types of Triggers
+		1. DDL Triggers
+		2. DML Triggers
+		DML After Triggers
+		After Update
+		After Delete
+		After insert
+		DML Instead of Triggers
+		Instead of Update
+		Instead of Delete
+		Instead of insert
 
 
-1. orders     fact -----transctonal 
-2. users		master ------dimensional
-3. products	----master -----dimensional 
-4. stores
 
-
-n= input(username)
-dbo----
-s="insert into"+{table}
-{1
-	{
-	}
-	{
-	}
-	
-}
-
-{2 	
-	
-json, binary file 
-
-xml
-		
------> Trigger
------> CTE
------> Transctions
-
-a. DDL				
-	Create 
-	Drop
-	Alter
-	Truncate
-
-b. DML
-	Insert
-	Update
-	Delete
-	Lock
-	Call				
-
-c. TCL
-	Commit
-	Savepoint
-	Rollback
-	set transction
-	set contraint
-				
-d. DQL
-	select
-				
-e. DCL
-	Grant ---> giving permission
-	Revoke---> back permission from user.
-
----> Front end programming languages
-	python, c, java, c++ etc
-	logic is same syntax is different
-
----> Back end language 
-	sql, no sql (not only sql)
-	sql (structure query language)
---->logic is same and syntax is almost same (90% of all built in functions are same) 
-		(mysql, postgrey sql, oracle, ms sql serevr)
-
----> sql case insensitive select = SELECT
----> python case sensitive select is not equal to SELECT
-
----> creating database two ways
-	1. GUI
-	2. With query
-
----> creating tables two ways
-	1. GUI
-	2. With query
-
----> delete table
-	1. GUI
-	2. With query
-
----> commnets are simple your compiler skip this statement
-	1. single line --
-	2. multiple line comment
-		/* multiple 
-		line comment*/
-
----> inserting data into tables
-	1. GUI
-	2. With query
-
----> * symbol display all columns 
----> as is a function for temperary name
----> sum, avg, count, max, min (Aggregate Function)
----> where clause with <, >, <=, >=, =, !=.
----> delete it remove specific records using where
----> drop is delete entire table
----> Truncate entire data not to table 
----> alter to create new column existed table
----> update insert into new column.
----> order by descending or ascending 
----> group by agrregate function based on data group of records
----> having clause is for condition with aggregate and group by
----> top to display specific records 
----> distict unique records 
----> ROW_NUMBER() 
----> RANK() 
----> DENSE_RANK()
-
-02/02/2023
----> wildcards with like	1. % any charcter (from one to many)
-					2. _ any charascter single length
-					3. -  find
-					4.[]
-04/02/2023
- ---> primary key, foreign key
-1. Gui
-2. Query
-
----> default constraints
----> identity contraints
----> check contraints
----> union vs union all
----> intersect
----> percent
----> in
----> on
----> set 
----> when
----> over
----> partiton by
----> desc
----> delete vs truncate
----> unique key constraint
----> deleting null values
----> partition by 
----> joins(sub query)		1. full join
-					2. self join
-					3. left 
-					4. ight 
-					5. cross join
----> schemas
----> except
----> is null
----> datetime
----> String Functions
----> Convert vs Cast
----> Datatypes
----> Tranction
----> UDF functions
----> Stored_procedure
----> views
----> variables
----> schema
----> e-r diagram
----> cursor > very slow
----> case vs iif
----> scope
----> pivot
----> Sys.tables
----> set_help
----> exec
-
-
-Advanced Topic
---->	CTE common table exprssion		
 			
