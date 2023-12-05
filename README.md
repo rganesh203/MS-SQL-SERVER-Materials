@@ -298,7 +298,3 @@ Triggers
 		Instead of Update
 		Instead of Delete
 		Instead of insert
-
-
-
-			
