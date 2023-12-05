@@ -12,6 +12,7 @@ Introduction to Data and Database systems
 		What is OORDBMS
 
 Complete Introduction to SQL SERVER
+
 		What is SQL
 		What is MS SQL SERVER?
 		What is T-SQL
@@ -19,11 +20,13 @@ Complete Introduction to SQL SERVER
 		What is query
 
 SQL Server Software Installation
+
 		Download and Installation of SQL SERVER Software
 		Download and Installation of SSMS Software
 		Prerequisites to Install SQL SERVER Software
 
 SSMS Window
+
 		What is an SSMS Window
 		What are Server Types
 		What is Server Name
@@ -33,6 +36,7 @@ SSMS Window
 		Password
  
 Data Types
+
 		What are Data Types
 		Different Types of Data Types
 		Integer Data Type
@@ -43,6 +47,7 @@ Data Types
 		Var binary(max)
 
 Sub-Languages in SQL Server
+
 		DDL	(Data Definition Language)
 		DML	(Data Manipulation Language)
 		DRL	(Data Retrieval Language)
@@ -50,6 +55,7 @@ Sub-Languages in SQL Server
 		DCL	(Data Control Language)
 
 Arithmetic Operators
+
 		ADDITION
 		SUBTRACTION
 		MULTIPLICATION
@@ -57,6 +63,7 @@ Arithmetic Operators
 		MODULUS
 
 Comparison Operators
+
 		EQUAL TO (=)
 		NOT EQUAL TO (<>, !=)
 		GREATER THAN (>)
@@ -65,37 +72,44 @@ Comparison Operators
 		LESS THAN OR EQUAL TO (<=)
 
 Logical Operators
+
 		AND
 		OR
 		NOT
 
 Set Operators
+
 		UNION
 		UNION ALL
 		INTERSECT
 		EXCEPT
  
 Special Operators
+
 		IN
 		BETWEEN-AND
 		LIKE
 		IS NULL
 
 Schemas
+
 		What is Schema
 		Purpose of Schemas
 		Where to use Schemas
 
 Functions
+
 		What is Function
 
 Single-Row Functions
+
 		What are Single- Row Functions
 		Number Functions
 		Character Functions
 		Date Functions
 
 Column/Group/Aggregate
+
 		What are Aggregated Functions
 		SUM ()
 		MAX ()
@@ -103,6 +117,7 @@ Column/Group/Aggregate
 		COUNT ()
 
 Special Clauses
+
 		Group BY
 		Having
 		Order BY
@@ -111,12 +126,14 @@ Special Clauses
 		Cube
 
 Ranking Functions
+
 		Purpose of Ranking
 		Row-Number ()
 		Rank ()
 		Dense-Rank ()
  
 Constraints
+
 		Domain
 		Identity
 		Check
@@ -131,6 +148,7 @@ Constraints
 		Self-Referential Key
 
 Joins
+
 		Definition of Joins
 		Types of Joins
 		Inner Join Outer Joins
@@ -143,6 +161,7 @@ Joins
 		Self-Join
 
 Views
+
 		What is View
 		Types of Views
 		Simple View
@@ -152,6 +171,7 @@ Views
 		Advantages of View
 
 Synonyms
+
 		What are Synonyms
 		Purpose of Synonyms
 		What is Alias Name
@@ -159,6 +179,7 @@ Synonyms
 		Advantages of Synonyms
 	 
 Indexes
+
 		What is an Index?
 		Need of indexes
 		Types of indexes
@@ -168,6 +189,7 @@ Indexes
 		Advantages of Indexes
 
 Sub Queries
+
 		What are Sub Queries
 		Purpose of Sub Queries
 		Types of Sub Queries
@@ -178,6 +200,7 @@ Sub Queries
 		Nth Highest Salary
 
 TCL Commands
+
 		Introduction
 		Types of Transactions
 	1.	Implicit Transactions
@@ -189,20 +212,24 @@ TCL Commands
 		Save Transaction
 
 DCL Commands
+
 		Grant
 		Revoke
 
 CTE	(Common Table Expression)
+
 		What is CTE
 		Uses of CTE
 		Where we use CTE
 
 Duplicates
+
 		What are Duplicates
 		How to Identify the Duplicates
 		How to remove the Duplicates
  
 Normalization
+
 		What is Normalization
 		Types of Normalizations
 		1st Form of Normalization
@@ -210,18 +237,21 @@ Normalization
 		3rd Form of Normalization
 
 E-R Modelling
+
 		What is E-R Modelling
 		Purpose of E-R Modelling
 		Structure of E-R Modelling
 		Advantages of E-R Modelling
 
 Relationships
+
 		What is Relationship
 		How to create the Relationships
 		Need of Relationships
 		Types of Relationships
 
 OLTPS
+
 		Full Form of OLTP
 		What is OLTP
 		Need of OLTPS
@@ -229,26 +259,31 @@ OLTPS
 
 T-SQL
 Introduction to T-SQL
+
 		What is meant by T-SQL?
 
 T-SQL Blocks Anonymous Blocks Named Blocks
 Anonymous Blocks
+
 		Variables
 		Control Statements
 		Cursors
 
 Named Blocks
+
 		Procedures
 		Functions
 		Triggers
  
 Variables
+
 		What are Variables
 		Types of Variables
 		Local Variables
 		Global Variables
 
 Control Statements
+
 		What are Control Statements
 		Types of Control Statements
 		If	Else
@@ -257,6 +292,7 @@ Control Statements
 		Case	When	Then
 
 Cursors
+
 		What is Cursor
 		Purpose of Cursors
 		Types of Cursors
@@ -264,6 +300,7 @@ Cursors
 		Cursors with Variables
 
 Stored Procedures
+
 		What is a Procedure
 		Need of Procedures
 		Types of Procedures
@@ -276,6 +313,7 @@ Stored Procedures
 		Drop the Procedure
 
 Stored Functions
+
 		What are functions
 		Need of Functions
 		Types of Functions
@@ -285,6 +323,7 @@ Stored Functions
 		Drop the Function
 	 
 Triggers
+
 		What is Trigger
 		Purpose of Trigger
 		Types of Triggers
