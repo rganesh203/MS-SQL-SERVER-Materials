@@ -1,4 +1,6 @@
 # SQL
+![name-of-you-image](https://severalnines.com/wp-content/uploads/2023/12/BLOG-Whats-new-in-SQL-Server-2022.png)
+
 Career BI Training
 Introduction to Data and Database systems
 
