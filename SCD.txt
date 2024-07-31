@@ -1,0 +1,112 @@
+id, name, dept_id, age
+
+	department wise max  salary using windows function
+	ChatGPT
+	To find the maximum salary for each department using window functions, 
+	you can use the MAX() function along with the OVER() clause in SQL. Here's an example query:
+
+	sql
+	Copy code
+	SELECT
+		department,
+		MAX(salary) OVER (PARTITION BY department) AS max_salary
+	FROM
+		your_table_name;
+	Replace your_table_name with the actual name of your table. This query will partition the data by 
+	department and calculate the
+	 maximum salary for each department using a window function.
+
+2. scd1 scd2 using sql merge
+
+	To implement Slowly Changing Dimension (SCD) Type 1 and Type 2 using the MERGE statement in SQL, you can use a combination of INSERT, UPDATE, and DELETE operations within the MERGE statement.
+
+	Here's a basic example illustrating SCD Type 1 and SCD Type 2 operations using MERGE:
+
+	Let's say we have a table named employees with columns employee_id, name, department, and salary. We want to track changes to the salary attribute.
+
+	SCD Type 1:
+
+	sql
+	Copy code
+	MERGE INTO employees AS target
+	USING (
+		SELECT 
+			employee_id,
+			'New Name' AS name,
+			department,
+			10000 AS salary
+		FROM 
+			employees
+		WHERE 
+			employee_id = 1
+	) AS source ON target.employee_id = source.employee_id
+	WHEN MATCHED THEN
+		UPDATE SET 
+			target.name = source.name,
+			target.salary = source.salary;
+	In this SCD Type 1 example, we're simply updating the existing record with new values. No historical data is kept.
+
+	SCD Type 2:
+
+	sql
+	Copy code
+	MERGE INTO employees AS target
+	USING (
+		SELECT 
+			employee_id,
+			'New Name' AS name,
+			department,
+			10000 AS salary
+		FROM 
+			employees
+		WHERE 
+			employee_id = 1
+	) AS source ON target.employee_id = source.employee_id
+	WHEN MATCHED THEN
+		UPDATE SET 
+			target.name = source.name,
+			target.salary = source.salary
+	WHEN NOT MATCHED THEN
+		INSERT (employee_id, name, department, salary)
+		VALUES (source.employee_id, source.name, source.department, source.salary);
+	In this SCD Type 2 example, when a change occurs, a new row is inserted with the updated 
+	information, while the original row remains unchanged. This preserves history and allows analysis
+	 over time.
+
+	Keep in mind that the actual implementation might vary based on your database system 
+	(e.g., MySQL, PostgreSQL, SQL Server) as syntax and functionality can differ.
+
+3. SELECT colunm_name, MAX(column_name) FROM table_name GROUP BY column_name;
+
+
+❓ 𝗪𝗵𝗮𝘁 𝗶𝘀 𝘁𝗵𝗲 𝗔𝗖𝗜𝗗 𝗣𝗿𝗼𝗽𝗲𝗿𝘁𝘆 𝗼𝗳 𝗗𝗕𝗠𝗦? 🤔
+
+📍 𝗔𝗧𝗢𝗠𝗜𝗖𝗜𝗧𝗬:
+The Atomicity ensures that it 𝗰𝗼𝗻𝘀𝗶𝗱𝗲𝗿𝘀 𝗮𝗹𝗹 𝘁𝗵𝗲 𝘁𝗿𝗮𝗻𝘀𝗮𝗰𝘁𝗶𝗼𝗻𝘀 𝗮𝘀 𝗮 𝗦𝗶𝗻𝗴𝗹𝗲 𝗨𝗻𝗶𝘁, 
+which means that either 𝗮𝗹𝗹 𝘁𝗵𝗲 𝗼𝗽𝗲𝗿𝗮𝘁𝗶𝗼𝗻𝘀 𝘄𝗶𝗹𝗹 𝗯𝗲 𝘀𝘂𝗰𝗰𝗲𝘀𝗳𝘂𝗹𝗹𝘆 𝗰𝗼𝗺𝗽𝗹𝗲𝘁𝗲𝗱 𝗼𝗿 𝗶𝘁 𝘄𝗶𝗹𝗹 𝗻𝗼𝘁 𝗯𝗲 𝗰𝗼𝗺𝗽𝗹𝗲𝘁𝗲𝗱 𝗮𝘁 𝗮𝗹𝗹, 
+there's no room for partial successfull execution.
+𝗙𝗼𝗿 𝗲𝗴: When you are sending money to your Friend's bank account, then you sending 
+it and your friend recieving it, will act as a Single Unit, and thereby the whole 
+operation will be considered a success if both the actions execute perfectly or it won't 
+execute at all.
+
+📍 𝗖𝗢𝗡𝗦𝗜𝗦𝗧𝗘𝗡𝗖𝗬:
+The Consistency ensures that our 𝗗𝗮𝘁𝗮𝗯𝗮𝘀𝗲 𝗿𝗲𝗺𝗮𝗶𝗻𝘀 𝗶𝗻 𝘁𝗵𝗲 𝗰𝗼𝗻𝘀𝗶𝘀𝘁𝗲𝗻𝘁 𝘀𝘁𝗮𝘁𝗲 𝗯𝗲𝗳𝗼𝗿𝗲 𝗮𝗻𝗱 𝗮𝗳𝘁𝗲𝗿 𝗲𝗮𝗰𝗵 𝗮𝗻𝗱 𝗲𝘃𝗲𝗿𝘆 
+𝘁𝗿𝗮𝗻𝘀𝗮𝗰𝘁𝗶𝗼𝗻, thereby every incoming data should follow the constraints and rules defined for 
+the database, making it sound meaningful.
+𝗙𝗼𝗿 𝗲𝗴: A university storing student's records, where each student must be enrolled to 
+atleast one course and should have a corresponding grade to it, thereby if any student 
+in future gets enrolled to university, should follow this rule.
+
+📍 𝗜𝗦𝗢𝗟𝗔𝗧𝗜𝗢𝗡:
+The Isolation ensures that 𝗲𝗮𝗰𝗵 𝘁𝗿𝗮𝗻𝘀𝗮𝗰𝘁𝗶𝗼𝗻𝘀 𝗮𝗿𝗲 𝗽𝗿𝗼𝗰𝗲𝘀𝘀𝗲𝗱 𝗶𝗻𝗱𝗲𝗽𝗲𝗻𝗱𝗲𝗻𝘁𝗹𝘆 𝗮𝗻𝗱 𝗱𝗼 𝗻𝗼𝘁 𝗶𝗻𝘁𝗲𝗿𝗳𝗲𝗿𝗲 𝘄𝗶𝘁𝗵 𝗲𝗮𝗰𝗵 𝗼𝘁𝗵𝗲𝗿.
+𝗙𝗼𝗿 𝗲𝗴: If Ram and Shyam are looking for a same book in a library and it's the last piece 
+there, and now Ram is about to buy the book and do the payment, so during that time if 
+Shyam also wants to buy then it won't be possible, as due to isolation Shyam's transaction 
+is restricted until Ram completes his, so as his transaction will be completed Shyam will 
+see that book is not available and will go to another library.
+
+📍 𝗗𝗨𝗥𝗔𝗕𝗜𝗟𝗜𝗧𝗬:
+This property ensures that 𝗼𝗻𝗰𝗲 𝗮 𝘁𝗿𝗮𝗻𝘀𝗮𝗰𝘁𝗶𝗼𝗻 𝗵𝗮𝘀 𝗯𝗲𝗲𝗻 𝗲𝘅𝗲𝗰𝘂𝘁𝗲𝗱 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆, 𝗶𝘁 𝗽𝗲𝗿𝘀𝗶𝘀𝘁𝘀 𝗶𝗻 𝘁𝗵𝗲 𝘀𝘆𝘀𝘁𝗲𝗺 𝗲𝘃𝗲𝗻 𝗶𝗻 𝘁𝗵𝗲 𝗲𝘃𝗲𝗻𝘁 
+𝗼𝗳 𝗮𝗻𝘆 𝗳𝗮𝗶𝗹𝘂𝗿𝗲𝘀 such as power outage, crashes or errors, thus all the transactions are permanently 
+stored in our database and we won't loose it.
