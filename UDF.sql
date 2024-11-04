@@ -1,64 +1,47 @@
-use [sql]
-go
 
-create table college 
-(id int,
-marks int,
-name varchar(30)
-)
+select * from flipkart
 
-create table sub 
-(id int,
-sub1 int,
-sub2 int,
-sub3 int
-)
+exec sp_help flipkart
 
-select * from college;
-select * from sub;
 
-insert into college values 
-(1,60, 'ganesh'),(2,50, 'ram'),(3,55, 'sham'),(4,70, 'raj')
-
-insert into sub VALUES 
-(1,10,30,20),(2,10,10,30),(3,20,25,10),(4,15,20,35)
-
---scalar function
-create function getmarks_college(@R int)
+create function dbo.flipkartw(@x datetime)
 returns varchar(50)
-as
-begin
-return (select [name] from college where id=@R)
+as 
+begin 
+declare @res varchar(40)
+set @res=right('0'+cast(month(@x) as varchar(10)),2) + '/' +  right('0'+cast(day(@x) as varchar(10)),2) + '/' + cast(year(@x) as varchar(10)) 
+return @res 
 end
 
-print dbo.getmarks_college(3)
+select *, dbo.flipkartw(doj) as [dattime] from flipkart
 
---table valued function
-create function getallstudents(@mark int)
-returns table
-as 
-return 
-	select * from college where marks>=@mark
-
-	select * from getallstudents(10)
-
---IVF
-
-CREATE FUNCTION [dbo].[udfGetProductList]
-(@Subm INT
-)
-RETURNS TABLE
-AS
-RETURN
-(SELECT ID, 
-        marks, 
-        name
- FROM college
- WHERE marks >= @Subm)
-
- SELECT *
-FROM dbo.udfGetProductList(50)
+exec sp_help flipkartw
+exec sp_help flipkart
 
 
+select * from orders as o
+inner join users as u
+on 0.id=u.id
+inner join product as p
+on o.id=p.id
+
+create view amazon_flipkar as 
+select * from flipkart as f
+inner join [dbo].[amazon] as a on f.id=a.roll
 
 
+select * from amazon_flipkar
+
+delete from amazon_flipkar where id=1
+
+create view [data] as 
+select * from [dbo].[sales_data_sample] where state is not null and country ='USA'
+
+
+insert into amazon_flipkar  values (1,'25554',1,'chess')
+
+alter view 
+
+drop view 
+
+select 'ganesh' 
