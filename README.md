@@ -1,4 +1,4 @@
-# SQLSQL Interview Questions at a Glance
+# SQL Interview Questions at a Glance
 
 ![image](https://github.com/user-attachments/assets/f659e78f-11d0-44a6-8b7e-4cd44c0b1174)
 
