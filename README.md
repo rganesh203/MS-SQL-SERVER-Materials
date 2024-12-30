@@ -1,6 +1,6 @@
 # SQL Interview Questions at a Glance
 
-![image](https://github.com/user-attachments/assets/f659e78f-11d0-44a6-8b7e-4cd44c0b1174)
+![image](https://github.com/user-attachments/assets/40c7eaec-9b62-49f6-a725-4323a6737a62)
 
 Throughout this article, we'll explore a range of SQL interview questions and answers for practitioners at the beginner and intermediate levels. If you're looking for an overview, we've compiled some top tips below:
 
